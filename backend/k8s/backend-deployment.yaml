@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: counter-backend
-        image: <Image>
+        image: ghcr.io/dreamcat04/counter-backend:v1
         resources:
           limits:
             memory: "128Mi"
