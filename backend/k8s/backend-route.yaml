@@ -4,7 +4,7 @@ metadata:
   name: counter-backend-route
 spec:
   rules:
-    - https:
+    - http:
         paths:
           - path: /counter-backend
             pathType: Prefix
