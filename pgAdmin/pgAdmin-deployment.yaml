@@ -13,6 +13,22 @@ spec:
     spec:
       containers:
       - name: counter-postgresadmin
+        env:
+        - name: PGADMIN_DEFAULT_EMAIL
+          valueFrom:
+            configMapKeyRef:
+              name: counter-postgresadmin
+              key: PGADMIN_DEFAULT_EMAIL
+        - name: PGADMIN_DEFAULT_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              name: counter-postgresadmin
+              key: PGADMIN_DEFAULT_PASSWORD
+        - name: PGADMIN_DEFAULT_PASSWORD_FILE
+          valueFrom:
+            configMapKeyRef:
+              name: counter-postgresadmin
+              key: PGADMIN_DEFAULT_PASSWORD_FILE
         image: ghcr.io/modul-i-ch-109/pgadmin4:latest
         resources:
           limits:
