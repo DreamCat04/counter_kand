@@ -4,5 +4,5 @@ metadata:
   name: counter-backend
 data:
   DB_HOST: localhost
-  DB_USER: dbUser
-  PASSPHRASE: Password1234!
+  DB_USER: postgres
+  PASSPHRASE: password
