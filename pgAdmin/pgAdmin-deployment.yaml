@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: counter-postgresadmin
+spec:
+  selector:
+    matchLabels:
+      app: counter-postgresadmin
+  template:
+    metadata:
+      labels:
+        app: counter-postgresadmin
+    spec:
+      containers:
+      - name: counter-postgresadmin
+        image: ghcr.io/modul-i-ch-109/pgadmin4:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8081
