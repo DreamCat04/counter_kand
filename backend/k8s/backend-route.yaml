@@ -1,15 +1,12 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: route.openshift.io/v1
+kind: Route
 metadata:
-  name: counter-backend-route
+  labels:
+    app: counter-backend
+  name: counter-backend
 spec:
-  rules:
-    - http:
-        paths:
-          - path: /counter-backend
-            pathType: Prefix
-            backend:
-              service:
-                name: counter-backend
-                port:
-                  number: 8080
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: counter-backend
