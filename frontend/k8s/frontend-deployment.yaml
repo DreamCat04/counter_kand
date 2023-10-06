@@ -14,6 +14,9 @@ spec:
     spec:
       containers:
       - name: counter-frontend
+        env:
+        - name: npm_config_cache
+          value: ./.npm-cache
         image: ghcr.io/dreamcat04/counter-frontend:v1
         resources:
           limits:
