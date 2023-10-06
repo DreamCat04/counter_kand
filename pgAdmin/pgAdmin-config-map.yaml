@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: counter-postgresadmin
+data:
+  PGADMIN_DEFAULT_EMAIL: thierry.kellenberger@stud.kbw.ch
+  PGADMIN_DEFAULT_PASSWORD: password1234
+  PGADMIN_DEFAULT_PASSWORD_FILE: ./pass.txt
