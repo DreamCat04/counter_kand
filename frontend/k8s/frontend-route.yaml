@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: counter-backend-route
+spec:
+  rules:
+    - https:
+        paths:
+          - path: /counter-backend
+            pathType: Prefix
+            backend:
+              service:
+                name: counter-backend
+                port:
+                  number: 8080
