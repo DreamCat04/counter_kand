@@ -30,7 +30,6 @@ spec:
               secretKeyRef:
                 name: database-secret
                 key: database-password
-
         image: ghcr.io/dreamcat04/counter-backend:v1
         resources:
           limits:
