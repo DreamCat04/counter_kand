@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: counter-backend
 data:
-  DB_HOST: counter-database
+  DB_HOST: db-service
   DB_USER: postgres
   PASSPHRASE: password
