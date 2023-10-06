@@ -30,6 +30,11 @@ spec:
               secretKeyRef:
                 name: database-secret
                 key: database-password
+          - name: DB_HOST
+            valueFrom:
+              configMapKeyRef:
+                name: counter-backend
+                key: DB_HOST
         image: ghcr.io/dreamcat04/counter-backend:v1
         resources:
           limits:
