@@ -22,15 +22,15 @@ spec:
             - name: POSTGRESQL_USER
               valueFrom:
                 secretKeyRef:
-                  name: counter-database
+                  name: database-secret
                   key: database-user
             - name: POSTGRESQL_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: counter-database
+                  name: database-secret
                   key: database-password
             - name: POSTGRESQL_DATABASE
               valueFrom:
                 secretKeyRef:
-                  name: counter-database
+                  name: database-secret
                   key: database-name
